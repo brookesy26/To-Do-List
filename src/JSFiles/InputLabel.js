@@ -1,6 +1,6 @@
-const Label = ({ className }) => {
+const Label = ({ className, children}) => {
     return (
-        <label className={className}></label>
+        <label className={className}>{children}</label>
     )
 }
 export default Label;

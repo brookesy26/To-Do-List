@@ -4,6 +4,7 @@ import AddItem from "./AddItem.js";
 
 const TodoList = () => {
   const [items, setItems] = useState([])
+
   return (
     <>
       <AddItem
@@ -11,11 +12,12 @@ const TodoList = () => {
         SetItemState={setItems}
       />
       <ul>
-        {items.map(listItem =>
-          <ListItem
+        {items.map(item =>
+          <ListItem key={item.id}
             itemObject={items}
-            item={listItem}
-            SetItemState={setItems} />)}
+            item={item}
+            SetItemState={setItems} 
+            />)}
       </ul >
     </>
   )

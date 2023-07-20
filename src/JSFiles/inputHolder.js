@@ -1,6 +1,7 @@
 const Input = ({ type, onChange, id, name, readOnly, placeholder, value }) => {
     return (
-        <input type={type}
+        <input 
+            type={type}
             onChange={onChange}
             id={id}
             name={name}

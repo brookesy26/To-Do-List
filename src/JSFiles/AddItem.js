@@ -1,14 +1,13 @@
 import { useState } from 'react'
 import Button from './button'
 import Input from './inputHolder'
-import './todo.css'
 
 const AddItem = ({ SetItemState, itemObject }) => {
   const [itemNameValue, setItemNameValue] = useState('')
-  const [itemID, setItemID] = useState(0)
+  const [itemID, setItemID] = useState(1)
 
   function handleAddItemClick() {
-    SetItemState([...itemObject, { id: itemID, title: itemNameValue, checked: false, readonly: true }])
+    SetItemState([...itemObject, { id: itemID, title: itemNameValue}])
     setItemID(itemID + 1)
   }
 
